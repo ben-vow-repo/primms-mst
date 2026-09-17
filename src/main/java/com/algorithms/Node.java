@@ -6,7 +6,7 @@ import java.util.List;
 public class Node {
     public String label;
     public List<Edge> edgeList;
-    public Boolean visited;
+    public boolean visited;
 
     public Node(String label){
         this.label = label;
