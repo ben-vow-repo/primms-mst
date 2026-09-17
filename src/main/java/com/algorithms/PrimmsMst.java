@@ -8,10 +8,10 @@ public class PrimmsMst {
 
     private PrimmsMst(){}
 
-    public static List<Edge> findMst(List<Node> nodes, Node newNode, List<Edge> mst){
+    public static List<Edge> findMst(List<Node> nodes, Node startingNode, List<Edge> mst){
         List<Edge> totalEdgesAccessible = new ArrayList<>();
         int totalVisited = 1;
-        newNode = nodes.get(0);
+        Node newNode = startingNode;
         newNode.visited = true;
         totalEdgesAccessible.addAll(newNode.edgeList);
         while(totalVisited<nodes.size()){

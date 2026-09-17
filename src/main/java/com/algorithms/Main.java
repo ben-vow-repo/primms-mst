@@ -7,6 +7,7 @@ import java.util.List;
 public class Main {
 
     public List<Node> nodes = new ArrayList<>();
+    public List<Edge> mst = new ArrayList<>();
 
     private Main(){}
 
@@ -20,5 +21,9 @@ public class Main {
     public static List<Node> createNode(String label, List<Node> nodes){
         nodes.add(new Node(label));
         return nodes;
+    }
+    
+    public static List<Edge> runPrims(List<Node> nodes, Node startingNode, List<Edge> mst){
+        return PrimmsMst.findMst(nodes, startingNode, mst);
     }
 }
